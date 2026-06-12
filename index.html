@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavya Vinayaraj | Data Analyst</title>
+<meta name="description" content="Data analyst turning messy data into clear decisions. Power BI, SQL, Python. MSc Data Science, University of Sheffield." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F7F4;
+    --ink:#15171C;
+    --slate:#565E6B;
+    --line:#E3E5E0;
+    --card:#FFFFFF;
+    --accent:#2B4C8C;
+    --signal:#DD9130;
+    --font-display:'Space Grotesk',system-ui,sans-serif;
+    --font-body:'Inter',system-ui,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+    --maxw:1060px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font-body);font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);}
+
+  /* top bar */
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);}
+  .brand{font-family:var(--font-display);font-weight:700;font-size:16px;letter-spacing:-.01em;}
+  .topnav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);text-decoration:none;margin-left:22px;transition:color .15s;}
+  .topnav a:hover{color:var(--accent);}
+  @media(max-width:620px){.topnav{display:none;}}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:84px 0 72px;}
+  .hero .eyebrow{margin-bottom:22px;}
+  .hero h1{
+    font-family:var(--font-display);font-weight:700;
+    font-size:clamp(34px,5.4vw,58px);line-height:1.04;letter-spacing:-.02em;margin:0 0 22px;
+  }
+  .hero h1 .em{color:var(--accent);}
+  .hero p.lede{font-size:18px;color:var(--slate);max-width:46ch;margin:0 0 28px;}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:12px 18px;border:1px solid var(--ink);transition:all .15s;}
+  .btn.primary{background:var(--ink);color:var(--bg);}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent);}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg);}
+
+  /* scatter signature */
+  .scatter{position:relative;width:100%;}
+  .scatter svg{width:100%;height:auto;display:block;}
+  .scatter .dot{fill:#C3C8CC;}
+  .scatter .outlier{fill:var(--signal);}
+  .scatter .ring{fill:none;stroke:var(--signal);stroke-width:1.2;opacity:.5;}
+  .scatter .lead{stroke:var(--slate);stroke-width:1;stroke-dasharray:3 3;opacity:.55;}
+  .scatter .axis{stroke:var(--line);stroke-width:1;}
+  .scatter figcaption{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;color:var(--signal);text-transform:uppercase;margin-top:4px;}
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;gap:36px;padding:56px 0 48px;}
+    .scatter{max-width:360px;}
+  }
+
+  /* generic section */
+  section{padding:64px 0;border-top:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;}
+  .sec-head .num{font-family:var(--font-mono);font-size:12px;color:var(--accent);}
+  .sec-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(22px,3vw,28px);letter-spacing:-.01em;margin:0;}
+
+  /* about */
+  .about p{font-size:18px;max-width:62ch;color:#2B2F38;margin:0 0 16px;}
+  .about p:last-child{margin-bottom:0;}
+  .about .pull{color:var(--accent);font-weight:500;}
+
+  /* skills */
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 44px;}
+  .skill .mono{display:block;margin-bottom:8px;color:var(--accent);}
+  .skill p{margin:0;color:#2B2F38;font-size:15.5px;line-height:1.55;}
+  @media(max-width:620px){.skills{grid-template-columns:1fr;}}
+
+  /* projects */
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media(max-width:720px){.projects{grid-template-columns:1fr;}}
+  .card{
+    background:var(--card);border:1px solid var(--line);padding:26px 26px 22px;
+    display:flex;flex-direction:column;transition:border-color .18s, transform .18s;
+  }
+  .card:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .card .tags{margin-bottom:14px;color:var(--slate);}
+  .card h3{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em;margin:0 0 6px;}
+  .card .q{font-size:14px;color:var(--accent);font-style:italic;margin:0 0 12px;}
+  .card p.body{font-size:14.5px;color:#3A3F49;margin:0 0 18px;line-height:1.55;flex:1;}
+  .card .links{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px;}
+  .card .links a{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.15s;}
+  .card .links a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+
+  /* contact */
+  .contact{border-top:1px solid var(--line);}
+  .contact h2{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,4vw,40px);letter-spacing:-.02em;margin:0 0 10px;}
+  .contact p{color:var(--slate);max-width:48ch;margin:0 0 26px;}
+  .contact .rows{display:flex;flex-direction:column;gap:2px;}
+  .contact .row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid var(--line);}
+  .contact .row:last-child{border-bottom:1px solid var(--line);}
+  .contact .row .label{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);}
+  .contact .row a{text-decoration:none;font-weight:500;}
+  .contact .row a:hover{color:var(--accent);}
+
+  footer{padding:40px 0 56px;}
+  footer .mono{color:var(--slate);}
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">Kavya Vinayaraj</div>
+    <nav class="topnav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="mono eyebrow">Data Analyst · Power BI · SQL · Python</div>
+      <h1>I turn messy data into <span class="em">things people can act on.</span></h1>
+      <p class="lede">Three years as a data analyst, mostly at a UK engineering firm, now at a neuroscience startup. Most of my work has been building dashboards leadership actually used, and fixing the data problems underneath them. MSc Data Science, University of Sheffield.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">View work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="scatter" aria-label="A scatter plot where one point sits apart from the cluster">
+      <svg viewBox="0 0 400 330" role="img" aria-hidden="true">
+        <line class="axis" x1="34" y1="296" x2="384" y2="296"/>
+        <line class="axis" x1="34" y1="20" x2="34" y2="296"/>
+        <!-- cluster -->
+        <circle class="dot" cx="78"  cy="248" r="5"/>
+        <circle class="dot" cx="104" cy="236" r="5"/>
+        <circle class="dot" cx="96"  cy="262" r="5"/>
+        <circle class="dot" cx="128" cy="244" r="5"/>
+        <circle class="dot" cx="120" cy="220" r="5"/>
+        <circle class="dot" cx="146" cy="232" r="5"/>
+        <circle class="dot" cx="138" cy="258" r="5"/>
+        <circle class="dot" cx="166" cy="216" r="5"/>
+        <circle class="dot" cx="160" cy="240" r="5"/>
+        <circle class="dot" cx="182" cy="228" r="5"/>
+        <circle class="dot" cx="176" cy="252" r="5"/>
+        <circle class="dot" cx="198" cy="208" r="5"/>
+        <circle class="dot" cx="204" cy="234" r="5"/>
+        <circle class="dot" cx="220" cy="220" r="5"/>
+        <circle class="dot" cx="214" cy="246" r="5"/>
+        <circle class="dot" cx="240" cy="204" r="5"/>
+        <circle class="dot" cx="236" cy="230" r="5"/>
+        <circle class="dot" cx="258" cy="216" r="5"/>
+        <circle class="dot" cx="252" cy="242" r="5"/>
+        <circle class="dot" cx="276" cy="200" r="5"/>
+        <circle class="dot" cx="282" cy="226" r="5"/>
+        <circle class="dot" cx="300" cy="212" r="5"/>
+        <circle class="dot" cx="296" cy="238" r="5"/>
+        <circle class="dot" cx="320" cy="222" r="5"/>
+        <!-- the one that doesn't fit -->
+        <line class="lead" x1="318" y1="74" x2="296" y2="120"/>
+        <circle class="ring" cx="326" cy="62" r="13"/>
+        <circle class="outlier" cx="326" cy="62" r="6.5"/>
+      </svg>
+      <figcaption>the one that doesn’t fit</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" class="about">
+    <div class="sec-head"><span class="num">01</span><h2>About</h2></div>
+    <p>I trained as an electronics engineer but moved into data fairly early. I was more interested in what the numbers were telling people than in the systems producing them, and that hasn't really changed.</p>
+    <p>Most of my experience comes from a UK engineering firm, where I owned the weekly reporting that leadership made decisions on. The data came from three systems that often disagreed, so a lot of the job was <span class="pull">data quality work, finding out why the numbers didn’t match and fixing it</span> before anyone relied on them. These days I’m at a neuroscience startup doing pipeline work in Python.</p>
+    <p>Day to day I work in Power BI, SQL, and Python. I also hold a Lean Six Sigma Green Belt, which mostly shows up as an urge to fix processes nobody asked me to fix.</p>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><span class="num">02</span><h2>What I work with</h2></div>
+    <div class="skills">
+      <div class="skill"><span class="mono">Visualisation &amp; Reporting</span><p>Power BI is my main tool. Data modelling, DAX, Power Query, and building dashboards people can read without needing a walkthrough.</p></div>
+      <div class="skill"><span class="mono">SQL &amp; Data Quality</span><p>Joins, aggregations, window functions, query tuning, mostly on MySQL. A lot of validation and reconciliation work across sources, plus some early Oracle experience from enterprise migration work.</p></div>
+      <div class="skill"><span class="mono">Programming</span><p>Python (Pandas, NumPy) for pipelines and automation, plus some R and C from earlier work. I’ve also integrated REST APIs, including an LLM, into reporting.</p></div>
+      <div class="skill"><span class="mono">Ways of working</span><p>I sit with non-technical teams to work out what they actually need and scope it into something deliverable. Lean Six Sigma Green Belt.</p></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head"><span class="num">03</span><h2>Selected work</h2></div>
+    <div class="projects">
+
+      <article class="card">
+        <div class="tags mono">Power BI · SQL · Power Query</div>
+        <h3>Executive KPI Reporting &amp; Data Quality</h3>
+        <p class="q">Why don’t these three systems agree?</p>
+        <p class="body">A weekly reporting cycle pulling from three systems that often disagreed. I built the Power BI dashboards for executive review, then wrote SQL validation that recomputed each metric from every source to find where and why they diverged. The recurring errors stopped, and the reports became something leadership could rely on.</p>
+        <div class="links"><a href="#">Case study →</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags mono">Python · Pandas</div>
+        <h3>Competitor &amp; Tender Benchmarking Tool</h3>
+        <p class="q">Where are our bids consistently out of line with the market?</p>
+        <p class="body">The tendering team was manually digging through years of bid data for every evaluation, so I built a Python tool that let them query and compare it on demand. Saved up to two hours per evaluation, and pricing discussions started from the data instead of memory.</p>
+        <div class="links"><a href="#">Case study →</a><a href="#">GitHub →</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags mono">Python · MATLAB · CNN</div>
+        <h3>EEG Emotion Classification</h3>
+        <p class="q">Can you read emotional state from raw brain signal?</p>
+        <p class="body">My undergraduate capstone. A CNN-based classifier for emotional states from raw EEG signal, using Power Spectral Analysis and PCA to get usable features out of noisy data. Python and MATLAB.</p>
+        <div class="links"><a href="#">GitHub →</a><a href="#">Write-up →</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags mono">Python · Statistics</div>
+        <h3>Misinformation &amp; Trust</h3>
+        <p class="q">How does misinformation shift what people feel and trust?</p>
+        <p class="body">My MSc dissertation. A statistical analysis of how misinformation affects emotional response and trust among UK users, working across quantitative and qualitative data to find the behavioural patterns.</p>
+        <div class="links"><a href="#">Write-up →</a></div>
+      </article>
+
+      <!--
+        ADD A FRESH PUBLIC-DATA PROJECT OR TWO HERE to strengthen the portfolio.
+        Copy one <article class="card">...</article> block above and fill it in. Strong options:
+        1. A Power BI dashboard on a public dataset, published to Power BI Public, link it.
+        2. A SQL analysis project (e.g. Danny Ma's 8-Week SQL Challenge), link the GitHub repo.
+        Replace every href="#" above with real links (GitHub repos, Power BI Public, a PDF case study).
+      -->
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="sec-head"><span class="num">04</span><h2>Contact</h2></div>
+    <h2>Get in touch</h2>
+    <p>I’m open to data analyst and BI roles. Email is the quickest way to reach me.</p>
+    <div class="rows">
+      <div class="row"><span class="label">Email</span><a href="mailto:kavyavinayaraj@gmail.com">kavyavinayaraj@gmail.com</a></div>
+      <div class="row"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/kavyavinayaraj" target="_blank" rel="noopener">linkedin.com/in/kavyavinayaraj</a></div>
+      <div class="row"><span class="label">GitHub</span><a href="https://github.com/kavyavinayaraj" target="_blank" rel="noopener">github.com/kavyavinayaraj</a></div>
+      <div class="row"><span class="label">Based in</span><span>Kerala, India</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="mono">© 2026 Kavya Vinayaraj</div>
+</footer>
+
+</body>
+</html>
