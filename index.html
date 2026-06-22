@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kavya Vinayaraj | Data Analyst</title>
-<meta name="description" content="Data analyst turning messy data into clear decisions. Power BI, SQL, Python. MSc Data Science, University of Sheffield." />
+<title>Kavya Vinayaraj | Data Analyst &amp; Analytics Engineer</title>
+<meta name="description" content="Data analyst and analytics engineer building analytical products and decision-support solutions. SQL, Python, Power BI, AI-assisted development. MSc Data Science, University of Sheffield." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -87,6 +87,8 @@
   @media(max-width:620px){.skills{grid-template-columns:1fr;}}
 
   /* projects */
+  .group-label{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:40px 0 16px;}
+  .group-label:first-of-type{margin-top:0;}
   .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
   @media(max-width:720px){.projects{grid-template-columns:1fr;}}
   .card{
@@ -101,6 +103,7 @@
   .card .links{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px;}
   .card .links a{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;transition:.15s;}
   .card .links a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .card .links .note{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);}
 
   /* contact */
   .contact{border-top:1px solid var(--line);}
@@ -137,9 +140,9 @@
 <header class="wrap">
   <div class="hero">
     <div class="hero-text">
-      <div class="mono eyebrow">Data Analyst · Power BI · SQL · Python</div>
+      <div class="mono eyebrow">Data Analyst · Analytics Engineering · SQL · Python</div>
       <h1>I turn messy data into <span class="em">things people can act on.</span></h1>
-      <p class="lede">Three years as a data analyst, mostly at a UK engineering firm, now at a neuroscience startup. Most of my work has been building dashboards leadership actually used, and fixing the data problems underneath them. MSc Data Science, University of Sheffield.</p>
+      <p class="lede">Three years as a data analyst, mostly at a UK engineering firm, now at a neuroscience startup and moving into analytics engineering and applied data science. Most of my work has been turning messy, multi-source data into reporting and tools people actually use, and fixing the data problems underneath. MSc Data Science, University of Sheffield.</p>
       <div class="cta">
         <a class="btn primary" href="#work">View work</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
@@ -150,7 +153,6 @@
       <svg viewBox="0 0 400 330" role="img" aria-hidden="true">
         <line class="axis" x1="34" y1="296" x2="384" y2="296"/>
         <line class="axis" x1="34" y1="20" x2="34" y2="296"/>
-        <!-- cluster -->
         <circle class="dot" cx="78"  cy="248" r="5"/>
         <circle class="dot" cx="104" cy="236" r="5"/>
         <circle class="dot" cx="96"  cy="262" r="5"/>
@@ -175,7 +177,6 @@
         <circle class="dot" cx="300" cy="212" r="5"/>
         <circle class="dot" cx="296" cy="238" r="5"/>
         <circle class="dot" cx="320" cy="222" r="5"/>
-        <!-- the one that doesn't fit -->
         <line class="lead" x1="318" y1="74" x2="296" y2="120"/>
         <circle class="ring" cx="326" cy="62" r="13"/>
         <circle class="outlier" cx="326" cy="62" r="6.5"/>
@@ -190,7 +191,7 @@
   <section id="about" class="about">
     <div class="sec-head"><span class="num">01</span><h2>About</h2></div>
     <p>I trained as an electronics engineer but moved into data fairly early. I was more interested in what the numbers were telling people than in the systems producing them, and that hasn't really changed.</p>
-    <p>Most of my experience comes from a UK engineering firm, where I owned the weekly reporting that leadership made decisions on. The data came from three systems that often disagreed, so a lot of the job was <span class="pull">data quality work, finding out why the numbers didn’t match and fixing it</span> before anyone relied on them. These days I’m at a neuroscience startup doing pipeline work in Python.</p>
+    <p>Most of my experience comes from a UK engineering firm, where I owned the weekly reporting that leadership made decisions on. The data came from three systems that often disagreed, so a lot of the job was <span class="pull">data quality work, finding out why the numbers didn’t match and fixing it</span> before anyone relied on them. These days I’m at a neuroscience startup building Python data pipelines and end-to-end analytical projects.</p>
     <p>Day to day I work in Power BI, SQL, and Python. I also hold a Lean Six Sigma Green Belt, which mostly shows up as an urge to fix processes nobody asked me to fix.</p>
   </section>
 
@@ -199,13 +200,15 @@
     <div class="skills">
       <div class="skill"><span class="mono">Visualisation &amp; Reporting</span><p>Power BI is my main tool. Data modelling, DAX, Power Query, and building dashboards people can read without needing a walkthrough.</p></div>
       <div class="skill"><span class="mono">SQL &amp; Data Quality</span><p>Joins, aggregations, window functions, query tuning, mostly on MySQL. A lot of validation and reconciliation work across sources, plus some early Oracle experience from enterprise migration work.</p></div>
-      <div class="skill"><span class="mono">Programming</span><p>Python (Pandas, NumPy) for pipelines and automation, plus some R and C from earlier work. I’ve also integrated REST APIs, including an LLM, into reporting.</p></div>
-      <div class="skill"><span class="mono">Ways of working</span><p>I sit with non-technical teams to work out what they actually need and scope it into something deliverable. Lean Six Sigma Green Belt.</p></div>
+      <div class="skill"><span class="mono">Programming &amp; Pipelines</span><p>Python (Pandas, NumPy) for data pipelines and automation, plus some R and C from earlier work. I’ve also integrated REST APIs, including an LLM, into reporting.</p></div>
+      <div class="skill"><span class="mono">Analytics Engineering &amp; AI</span><p>Building end-to-end analytical projects, and using AI coding tools day to day to build, debug, and ship faster while checking their output against the data.</p></div>
     </div>
   </section>
 
   <section id="work">
     <div class="sec-head"><span class="num">03</span><h2>Selected work</h2></div>
+
+    <div class="group-label">Professional Experience</div>
     <div class="projects">
 
       <article class="card">
@@ -213,7 +216,7 @@
         <h3>Executive KPI Reporting &amp; Data Quality</h3>
         <p class="q">Why don’t these three systems agree?</p>
         <p class="body">A weekly reporting cycle pulling from three systems that often disagreed. I built the Power BI dashboards for executive review, then wrote SQL validation that recomputed each metric from every source to find where and why they diverged. The recurring errors stopped, and the reports became something leadership could rely on.</p>
-        <div class="links"><a href="#">Case study →</a></div>
+        <div class="links"><span class="note">Internal enterprise project (NDA)</span></div>
       </article>
 
       <article class="card">
@@ -221,32 +224,56 @@
         <h3>Competitor &amp; Tender Benchmarking Tool</h3>
         <p class="q">Where are our bids consistently out of line with the market?</p>
         <p class="body">The tendering team was manually digging through years of bid data for every evaluation, so I built a Python tool that let them query and compare it on demand. Saved up to two hours per evaluation, and pricing discussions started from the data instead of memory.</p>
-        <div class="links"><a href="#">Case study →</a><a href="#">GitHub →</a></div>
+        <div class="links"><span class="note">Internal enterprise project (NDA)</span></div>
       </article>
+
+    </div>
+
+    <div class="group-label">Analytics Projects</div>
+    <div class="projects">
+
+      <article class="card">
+        <div class="tags mono">SQL · CTEs · Window Functions</div>
+        <h3>SQL Challenge</h3>
+        <p class="q">How far can SQL alone take an analysis?</p>
+        <p class="body">Solved business-oriented SQL scenarios involving joins, aggregations, window functions, CTEs and KPI calculations, each written up with the approach and the result, to sharpen analytical problem-solving.</p>
+        <div class="links"><a href="https://github.com/KavyaVinayaraj/sql-challenge" target="_blank" rel="noopener">GitHub →</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags mono">Next.js · AI-assisted build · Web app</div>
+        <h3>StayScout</h3>
+        <p class="q">What does a clean booking enquiry flow need?</p>
+        <p class="body">An AI-assisted build. A property landing page with a lead-capture enquiry flow, built in Next.js with ChatGPT as my coding partner. I set the requirements, designed the page, and iterated on the form and validation to ship a clean, usable web product.</p>
+        <div class="links"><a href="https://github.com/KavyaVinayaraj/stayscout" target="_blank" rel="noopener">GitHub →</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags mono">Next.js · AI-assisted build · Operations</div>
+        <h3>RentOps</h3>
+        <p class="q">How do you give leadership one clear operational view?</p>
+        <p class="body">An AI-assisted build. An operations dashboard in Next.js that tracks revenue, occupancy, and bookings across properties, with the totals computed from the data so they always match. Built and deployed with ChatGPT as my coding partner, with an AI summary feature on the roadmap.</p>
+        <div class="links"><a href="https://github.com/KavyaVinayaraj/rentops" target="_blank" rel="noopener">GitHub →</a></div>
+      </article>
+
+    </div>
+
+    <div class="group-label">Academic Research</div>
+    <div class="projects">
 
       <article class="card">
         <div class="tags mono">Python · MATLAB · CNN</div>
         <h3>EEG Emotion Classification</h3>
         <p class="q">Can you read emotional state from raw brain signal?</p>
-        <p class="body">My undergraduate capstone. A CNN-based classifier for emotional states from raw EEG signal, using Power Spectral Analysis and PCA to get usable features out of noisy data. Python and MATLAB.</p>
-        <div class="links"><a href="#">GitHub →</a><a href="#">Write-up →</a></div>
+        <p class="body">My undergraduate final-year project. A CNN-based classifier for emotional states from raw EEG signal, using Power Spectral Analysis and PCA to get usable features out of noisy data. Python and MATLAB.</p>
       </article>
 
       <article class="card">
-        <div class="tags mono">Python · Statistics</div>
-        <h3>Misinformation &amp; Trust</h3>
+        <div class="tags mono">Python · Statistics · SPSS</div>
+        <h3>Misinformation, Media Literacy &amp; Trust Analysis</h3>
         <p class="q">How does misinformation shift what people feel and trust?</p>
-        <p class="body">My MSc dissertation. A statistical analysis of how misinformation affects emotional response and trust among UK users, working across quantitative and qualitative data to find the behavioural patterns.</p>
-        <div class="links"><a href="#">Write-up →</a></div>
+        <p class="body">My MSc dissertation. A statistical analysis of how misinformation and media literacy shape emotional response and trust among UK users, working across the data to surface the behavioural patterns.</p>
       </article>
-
-      <!--
-        ADD A FRESH PUBLIC-DATA PROJECT OR TWO HERE to strengthen the portfolio.
-        Copy one <article class="card">...</article> block above and fill it in. Strong options:
-        1. A Power BI dashboard on a public dataset, published to Power BI Public, link it.
-        2. A SQL analysis project (e.g. Danny Ma's 8-Week SQL Challenge), link the GitHub repo.
-        Replace every href="#" above with real links (GitHub repos, Power BI Public, a PDF case study).
-      -->
 
     </div>
   </section>
@@ -254,11 +281,11 @@
   <section id="contact" class="contact">
     <div class="sec-head"><span class="num">04</span><h2>Contact</h2></div>
     <h2>Get in touch</h2>
-    <p>I’m open to data analyst and BI roles. Email is the quickest way to reach me.</p>
+    <p>I’m open to data analyst, analytics engineering, and data science roles. Email is the quickest way to reach me.</p>
     <div class="rows">
       <div class="row"><span class="label">Email</span><a href="mailto:kavyavinayaraj@gmail.com">kavyavinayaraj@gmail.com</a></div>
       <div class="row"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/kavyavinayaraj" target="_blank" rel="noopener">linkedin.com/in/kavyavinayaraj</a></div>
-      <div class="row"><span class="label">GitHub</span><a href="https://github.com/kavyavinayaraj" target="_blank" rel="noopener">github.com/kavyavinayaraj</a></div>
+      <div class="row"><span class="label">GitHub</span><a href="https://github.com/KavyaVinayaraj" target="_blank" rel="noopener">github.com/KavyaVinayaraj</a></div>
       <div class="row"><span class="label">Based in</span><span>Kerala, India</span></div>
     </div>
   </section>
